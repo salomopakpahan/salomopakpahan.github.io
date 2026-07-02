@@ -1,56 +1,128 @@
 import "./Navbar.css";
-import { useEffect,useState } from "react";
 
-function Navbar(){
-  
-const [scroll,setScroll]=useState(false);
+import { useEffect, useState } from "react";
+import useClock from "../hooks/useClock";
 
-useEffect(()=>{
+import {
+  FaClock,
+  FaMapMarkerAlt,
+  FaCircle,
+} from "react-icons/fa";
 
-const handleScroll=()=>{
+function Navbar() {
 
-setScroll(window.scrollY>50);
+  const [active, setActive] = useState(false);
 
-};
+  const {
+    day,
+    date,
+    month,
+    year,
+    hour,
+    minute,
+    second,
+  } = useClock();
 
-window.addEventListener("scroll",handleScroll);
+  useEffect(() => {
 
-return ()=>window.removeEventListener("scroll",handleScroll);
+    const handleScroll = () => {
 
-},[]);
+      if (window.scrollY > 30) {
 
+        setActive(true);
 
-return(
+      } else {
 
-<nav className={scroll ? "navbar active":"navbar"}>
+        setActive(false);
 
-<div className="nav-container">
+      }
 
-<div className="logo">
+    };
 
-Salomo
+    window.addEventListener("scroll", handleScroll);
 
-</div>
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
 
-<ul className="nav-links">
+  }, []);
 
-<li><a href="#home">Home</a></li>
+  return (
 
-<li><a href="#about">About</a></li>
+    <nav className={active ? "navbar active" : "navbar"}>
 
-<li><a href="#skills">Skills</a></li>
+      <div className="logo">
 
-<li><a href="#projects">Projects</a></li>
+        <h1>SPARKLAB</h1>
 
-<li><a href="#contact">Let's Talk</a></li>
+        <span>
+          Automation • AI • IoT
+        </span>
 
-</ul>
+      </div>
 
-</div>
+      <ul>
 
-</nav>
+        <li><a href="#home">Home</a></li>
 
-)
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#skills">Skills</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#contact">Let's Talk</a></li>
+
+      </ul>
+
+      <div className="navbar-info">
+
+        <div className="status">
+
+          <FaCircle />
+
+          ONLINE
+
+        </div>
+
+        <div className="clock">
+
+          <FaClock />
+
+          {hour}:{minute}:{second} WIB
+
+        </div>
+
+        <div className="date">
+
+          {day},
+
+          {" "}
+
+          {date}
+
+          {" "}
+
+          {month}
+
+          {" "}
+
+          {year}
+
+        </div>
+
+        <div className="location">
+
+          <FaMapMarkerAlt />
+
+          Surabaya
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  );
 
 }
 
