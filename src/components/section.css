@@ -1,0 +1,157 @@
+.section{
+
+    width:100%;
+
+    padding:120px 8%;
+
+    background:#0f0f0f;
+
+}
+
+.section-content{
+
+    width:100%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    color:#d4af37;
+
+    font-size:55px;
+
+    margin-bottom:35px;
+
+}
+
+.section-desc{
+
+    color:#ddd;
+
+    text-align:center;
+
+    font-size:21px;
+
+    line-height:42px;
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+.card-container{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+.card-icon{
+
+    font-size:42px;
+
+    color:#d4af37;
+
+    margin-bottom:18px;
+
+}
+
+.card h3{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+.card p{
+
+    color:#d8d8d8;
+
+    line-height:36px;
+
+}
+
+.stats{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.stat{
+
+    background:#171717;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    text-align:center;
+
+}
+
+.stat svg{
+
+    color:#d4af37;
+
+    font-size:40px;
+
+}
+
+.stat h1{
+
+    margin:15px 0;
+
+    font-size:42px;
+
+}
+
+.stat p{
+
+    color:#ccc;
+
+}
