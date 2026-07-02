@@ -1,196 +1,270 @@
 import "./About.css";
 
 import profile from "../assets/profile.jpg";
+import { getAge } from "../utils/age";
 
 import {
-  FaGraduationCap,
+  FaUserGraduate,
+  FaMapMarkerAlt,
+  FaBirthdayCake,
+  FaUniversity,
+  FaBullseye,
+  FaLanguage,
+  FaUsers,
   FaLaptopCode,
   FaMicrochip,
-  FaProjectDiagram,
-  FaUserGraduate,
-  FaAward,
 } from "react-icons/fa";
 
 function About() {
-
   return (
+    <section id="about" className="about">
 
-<section id="about" className="about">
+      <div className="about-title">
 
-<div className="about-container">
+        <p>WHO AM I</p>
 
-<h2>
+        <h2>About Me</h2>
 
-About Me
+      </div>
 
-</h2>
+      <div className="about-top">
 
-<div className="about-top">
+        <div className="about-image">
 
-<div className="about-image">
+          <img src={profile} alt="Salomo" />
 
-<img src={profile} alt="Salomo"/>
+        </div>
 
-</div>
+        <div className="about-info">
 
-<div className="about-text">
+          <h1>Salomo Fransiskus Pakpahan</h1>
 
-<h3>
+          <h3>
+            Automation Engineer • AI Developer • IoT Engineer
+          </h3>
 
-Who am I?
+          <p>
 
-</h3>
+            I am an Electrical Engineering undergraduate at Petra Christian
+            University who is passionate about Automation Systems,
+            Artificial Intelligence, Industrial Internet of Things,
+            PLC Programming, Networking, and Full Stack Development.
 
-<p>
+            <br /><br />
 
-I am <span>Salomo Fransiskus Pakpahan</span>, an Electrical Engineering undergraduate with a passion for Industrial Internet of Things (IIoT), Automation Systems, Embedded Systems, Artificial Intelligence, Networking, and Software Development.
+            I enjoy designing intelligent industrial solutions by integrating
+            software and hardware to improve productivity, efficiency,
+            and innovation in Industry 4.0.
 
-</p>
+          </p>
 
-<p>
+          <div className="info-grid">
 
-I enjoy transforming ideas into practical solutions by integrating hardware and software to create intelligent systems. Throughout my academic journey, I have worked on various projects involving Siemens PLC, Arduino, ESP32, MQTT, Node-RED, Python, and React.
+            <div>
 
-</p>
+              <FaBirthdayCake />
 
-<p>
+              <span>{getAge()} Years Old</span>
 
-My long-term goal is to become an Automation & Artificial Intelligence Engineer who contributes to the advancement of Industry 4.0 by developing smart technologies that improve industrial efficiency and everyday life.
+            </div>
 
-</p>
+            <div>
 
-</div>
+              <FaMapMarkerAlt />
 
-</div>
+              <span>Surabaya, Indonesia</span>
 
-<div className="about-cards">
+            </div>
 
-<div className="about-card">
+            <div>
 
-<FaGraduationCap/>
+              <FaUniversity />
 
-<h3>Education</h3>
+              <span>Petra Christian University</span>
 
-<p>
+            </div>
 
-Bachelor of Electrical Engineering
+            <div>
 
-<br/>
+              <FaBullseye />
 
-Widya Mandala Catholic University
+              <span>Automation & AI Engineer</span>
 
-</p>
+            </div>
 
-</div>
+          </div>
 
-<div className="about-card">
+        </div>
 
-<FaLaptopCode/>
+      </div>
 
-<h3>Specialization</h3>
+      <div className="education">
 
-<p>
+        <h2>
 
-Industrial IoT
+          <FaUserGraduate />
 
-<br/>
+          Education Journey
 
-PLC Automation
+        </h2>
 
-<br/>
+        <div className="timeline">
 
-Embedded System
+          <div className="timeline-item">
+            <h3>2023 - Present</h3>
+            <p>Petra Christian University</p>
+          </div>
 
-<br/>
+          <div className="timeline-item">
+            <h3>2020 - 2023</h3>
+            <p>SMK KR Harapan Sejati</p>
+          </div>
 
-Artificial Intelligence
+          <div className="timeline-item">
+            <h3>2017 - 2020</h3>
+            <p>SMPN 40 Surabaya</p>
+          </div>
 
-</p>
+          <div className="timeline-item">
+            <h3>2011 - 2017</h3>
+            <p>SDN Jeruk Surabaya</p>
+          </div>
 
-</div>
+          <div className="timeline-item">
+            <h3>2008 - 2011</h3>
+            <p>Excellent Children Driyorejo</p>
+          </div>
 
-<div className="about-card">
+        </div>
 
-<FaMicrochip/>
+      </div>
 
-<h3>Tools</h3>
+      <div className="about-bottom">
 
-<p>
+        <div className="about-card">
 
-Arduino
+          <h2>
 
-<br/>
+            <FaLanguage />
 
-ESP32
+            Languages
 
-<br/>
+          </h2>
 
-Node-RED
+          <div className="skill-line">
 
-<br/>
+            <span>🇮🇩 Indonesian</span>
 
-MQTT
+            <div className="bar">
 
-<br/>
+              <div style={{ width: "100%" }}></div>
 
-React
+            </div>
 
-</p>
+          </div>
 
-</div>
+          <div className="skill-line">
 
-</div>
+            <span>🇺🇸 English</span>
 
-<div className="stats">
+            <div className="bar">
 
-<div className="stat">
+              <div style={{ width: "82%" }}></div>
 
-<FaProjectDiagram/>
+            </div>
 
-<h1>20+</h1>
+          </div>
 
-<p>Projects</p>
+        </div>
 
-</div>
+        <div className="about-card">
 
-<div className="stat">
+          <h2>
 
-<FaAward/>
+            <FaUsers />
 
-<h1>10+</h1>
+            Soft Skills
 
-<p>Technologies</p>
+          </h2>
 
-</div>
+          <div className="badge-container">
 
-<div className="stat">
+            <span>Leadership</span>
 
-<FaUserGraduate/>
+            <span>Public Speaking</span>
 
-<h1>3+</h1>
+            <span>Critical Thinking</span>
 
-<p>Years Learning</p>
+            <span>Problem Solving</span>
 
-</div>
+            <span>Communication</span>
 
-<div className="stat">
+            <span>Teamwork</span>
 
-<FaGraduationCap/>
+            <span>Negotiation</span>
 
-<h1>100%</h1>
+            <span>Creativity</span>
 
-<p>Passion</p>
+            <span>Project Management</span>
 
-</div>
+            <span>Adaptability</span>
 
-</div>
+          </div>
 
-</div>
+        </div>
 
-</section>
+        <div className="about-card">
 
-  )
+          <h2>
 
+            <FaLaptopCode />
+
+            Technical Skills
+
+          </h2>
+
+          <div className="badge-container">
+
+            <span>PLC Siemens</span>
+
+            <span>Arduino</span>
+
+            <span>ESP32</span>
+
+            <span>Industrial IoT</span>
+
+            <span>Artificial Intelligence</span>
+
+            <span>Python</span>
+
+            <span>React</span>
+
+            <span>JavaScript</span>
+
+            <span>Node-RED</span>
+
+            <span>MQTT</span>
+
+            <span>Networking</span>
+
+            <span>Linux</span>
+
+            <span>Git</span>
+
+            <span>Embedded System</span>
+
+            <span>HTML</span>
+
+            <span>CSS</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+  );
 }
 
 export default About;
