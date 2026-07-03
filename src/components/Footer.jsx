@@ -1,42 +1,88 @@
 import "./Footer.css";
 
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaUniversity,
+  FaBolt,
+  FaRobot,
+} from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="footer">
 
-      <h2>SPARKLAB</h2>
+      <div className="footer-container">
 
-      <p>
-        Building the future through
-        Automation, Artificial Intelligence,
-        and Industrial IoT.
-      </p>
+        <h1>SPARKLAB</h1>
 
-      <div className="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <span className="footer-subtitle">
+          Automation • Artificial Intelligence • Industrial IoT
+        </span>
+
+        <p className="footer-quote">
+          Engineering the Future with Intelligence and Automation.
+        </p>
+
+        <div className="footer-divider"></div>
+
+        <div className="footer-info">
+
+          <div>
+            <FaMapMarkerAlt />
+            <span>Surabaya, Indonesia</span>
+          </div>
+
+          <div>
+            <FaUniversity />
+            <span>Petra Christian University</span>
+          </div>
+
+          <div>
+            <FaBolt />
+            <span>Available for Internship & Collaboration</span>
+          </div>
+
+          <div>
+            <FaRobot />
+            <span>Industrial Automation & AI Engineer</span>
+          </div>
+
+        </div>
+
+        <div className="footer-socials">
+
+          <a href="#">
+            <FaGithub />
+          </a>
+
+          <a href="#">
+            <FaLinkedin />
+          </a>
+
+          <a href="#">
+            <FaEnvelope />
+          </a>
+
+        </div>
+
+        <div className="footer-divider"></div>
+
+        <div className="footer-bottom">
+
+          <p>
+            © 2026 Salomo Fransiskus Pakpahan
+          </p>
+
+          <span>
+            Designed & Developed with React + Vite
+          </span>
+
+        </div>
+
       </div>
-
-      <div className="footer-socials">
-        <a href="https://github.com/" target="_blank">
-          Github
-        </a>
-
-        <a href="https://linkedin.com/" target="_blank">
-          LinkedIn
-        </a>
-
-        <a href="mailto:your@email.com">
-          Email
-        </a>
-      </div>
-
-      <span>
-        © 2026 Salomo Fransiskus Pakpahan
-      </span>
 
     </footer>
   );
