@@ -1,280 +1,257 @@
 import "./Contact.css";
 
 import {
-
-FaInstagram,
-
-FaTelegramPlane,
-
-FaGithub,
-
-FaEnvelope,
-
-FaMapMarkerAlt,
-
-FaClock,
-
-FaCircle
-
+  FaInstagram,
+  FaTelegramPlane,
+  FaGithub,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaClock,
+  FaCircle,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import useClock from "../hooks/useClock";
 
-function Contact(){
+function Contact() {
 
-const{
+  const {
+    hour,
+    minute,
+    second,
+    day,
+    date,
+    month,
+    year
+  } = useClock();
 
-hour,
+  return (
 
-minute,
+    <section
+      id="contact"
+      className="contact reveal"
+    >
 
-second,
+      {/* ================= TITLE ================= */}
 
-day,
+      <div className="contact-title">
 
-date,
+        <p>
+          LET'S CONNECT
+        </p>
 
-month,
+        <h2>
+          Let's Build Something Amazing Together
+        </h2>
 
-year
+      </div>
 
-}=useClock();
+      {/* ================= CONTAINER ================= */}
 
-return(
+      <div className="contact-container">
 
-<section
-id="contact"
-className="contact reveal"
->
+        {/* LEFT SIDE */}
 
-<div className="contact-title">
+        <div className="contact-left">
 
-<p>
+          <div className="status-card">
 
-LET'S CONNECT
+            <div className="status-top">
 
-</p>
+              <FaCircle />
 
-<h2>
+              <h3>
+                Available for Internship
+              </h3>
 
-Let's Build Something Amazing Together
+            </div>
 
-</h2>
+            <p>
+              Open to Internship, Collaboration,
+              Research Projects, Industrial Automation,
+              Artificial Intelligence and Industrial IoT Development.
+            </p>
 
-</div>
+          </div>
 
-<div className="contact-container">
+          <div className="contact-info">
 
-<div className="contact-left">
+            <div className="info">
 
-<div className="status-card">
+              <FaMapMarkerAlt />
 
-<div className="status-top">
+              <div>
 
-<FaCircle/>
+                <h4>Location</h4>
 
-<h3>
+                <span>
+                  Surabaya, Indonesia
+                </span>
 
-Available for Internship
+              </div>
 
-</h3>
+            </div>
 
-</div>
+            <div className="info">
 
-<p>
+              <FaClock />
 
-Open to Internship, Collaboration,
-Research Project, Industrial Automation,
-Artificial Intelligence and IoT Development.
+              <div>
 
-</p>
+                <h4>Jakarta Time</h4>
 
-</div>
+                <span>
+                  {hour}:{minute}:{second} WIB
+                </span>
 
-<div className="contact-info">
+              </div>
 
-<div className="info">
+            </div>
 
-<FaMapMarkerAlt/>
+            <div className="info">
 
-<div>
+              <FaClock />
 
-<h4>
+              <div>
 
-Location
+                <h4>Today</h4>
 
-</h4>
+                <span>
+                  {day}, {date} {month} {year}
+                </span>
 
-<span>
+              </div>
 
-Surabaya, Indonesia
+            </div>
 
-</span>
+          </div>
 
-</div>
+        </div>
 
-</div>
+        {/* RIGHT SIDE */}
 
-<div className="info">
+        <div className="contact-right">
 
-<FaClock/>
+          {/* WHATSAPP */}
 
-<div>
+          <a
+            href="https://wa.me/6282140865618?text=Hello%20Salomo,%20I%20visited%20your%20portfolio%20website."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-card whatsapp-card"
+          >
 
-<h4>
+            <FaWhatsapp />
 
-Jakarta Time
+            <div>
 
-</h4>
+              <h3>WhatsApp</h3>
 
-<span>
+              <p>
+                +62 821-4086-5618
+              </p>
 
-{hour}:{minute}:{second} WIB
+            </div>
 
-</span>
+          </a>
 
-</div>
+          {/* EMAIL */}
 
-</div>
+          <a
+            href="mailto:pakpahansalomo2@gmail.com"
+            className="social-card"
+          >
 
-<div className="info">
+            <FaEnvelope />
 
-<FaClock/>
+            <div>
 
-<div>
+              <h3>Email</h3>
 
-<h4>
+              <p>
+                pakpahansalomo2@gmail.com
+              </p>
 
-Today
+            </div>
 
-</h4>
+          </a>
 
-<span>
+          {/* INSTAGRAM */}
 
-{day}, {date} {month} {year}
+          <a
+            href="https://www.instagram.com/frans_salomo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-card"
+          >
 
-</span>
+            <FaInstagram />
 
-</div>
+            <div>
 
-</div>
+              <h3>Instagram</h3>
 
-</div>
+              <p>
+                @frans_salomo
+              </p>
 
-</div>
+            </div>
 
-<div className="contact-right">
+          </a>
 
-<a
+          {/* TELEGRAM */}
 
-href="mailto:c11230015@john.petra.ac.id"
+          <a
+            href="https://t.me/s234567812"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-card"
+          >
 
-className="social-card"
+            <FaTelegramPlane />
 
->
+            <div>
 
-<FaEnvelope/>
+              <h3>Telegram</h3>
 
-<div>
+              <p>
+                @s234567812
+              </p>
 
-<h3>Email</h3>
+            </div>
 
-<p>
+          </a>
 
-c11230015@john.petra.ac.id
+          {/* GITHUB */}
 
-</p>
+          <a
+            href="https://github.com/salomopakpahan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-card"
+          >
 
-</div>
+            <FaGithub />
 
-</a>
+            <div>
 
-<a
+              <h3>Github</h3>
 
-href="https://www.instagram.com/frans_salomo"
+              <p>
+                github.com/salomopakpahan
+              </p>
 
-target="_blank"
+            </div>
 
-className="social-card"
+          </a>
 
->
+        </div>
 
-<FaInstagram/>
+      </div>
 
-<div>
+    </section>
 
-<h3>Instagram</h3>
-
-<p>
-
-@frans_salomo
-
-</p>
-
-</div>
-
-</a>
-
-<a
-
-href="https://t.me/s234567812"
-
-target="_blank"
-
-className="social-card"
-
->
-
-<FaTelegramPlane/>
-
-<div>
-
-<h3>Telegram</h3>
-
-<p>
-
-@s234567812
-
-</p>
-
-</div>
-
-</a>
-
-<a
-
-href="https://github.com/salomopakpahan"
-
-target="_blank"
-
-className="social-card"
-
->
-
-<FaGithub/>
-
-<div>
-
-<h3>Github</h3>
-
-<p>
-
-github.com/salomopakpahan
-
-</p>
-
-</div>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-)
-
+  );
 }
 
 export default Contact;
