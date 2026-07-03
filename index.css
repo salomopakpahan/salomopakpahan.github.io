@@ -41,3 +41,191 @@ display:block;
 max-width:100%;
 
 }
+
+#tsparticles{
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+}
+
+/* =========================================
+   SPARKLAB FUTURE BACKGROUND
+========================================= */
+
+body{
+    background:#050505;
+    overflow-x:hidden;
+}
+
+/* GOLD AURORA LEFT TOP */
+
+body::before{
+    content:"";
+    position:fixed;
+
+    width:700px;
+    height:700px;
+
+    top:-250px;
+    left:-250px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.18) 0%,
+            rgba(212,175,55,.08) 40%,
+            transparent 75%
+        );
+
+    filter:blur(120px);
+
+    animation:
+        glowMove1 18s ease-in-out infinite alternate;
+
+    pointer-events:none;
+    z-index:-3;
+}
+
+/* GOLD AURORA RIGHT BOTTOM */
+
+body::after{
+    content:"";
+    position:fixed;
+
+    width:800px;
+    height:800px;
+
+    right:-300px;
+    bottom:-300px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,215,0,.15) 0%,
+            rgba(212,175,55,.05) 40%,
+            transparent 75%
+        );
+
+    filter:blur(140px);
+
+    animation:
+        glowMove2 22s ease-in-out infinite alternate;
+
+    pointer-events:none;
+    z-index:-3;
+}
+
+/* =========================================
+   INDUSTRIAL GRID
+========================================= */
+
+html::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+        linear-gradient(
+            rgba(212,175,55,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(212,175,55,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:60px 60px;
+
+    z-index:-2;
+    pointer-events:none;
+}
+
+/* =========================================
+   GOLD LIGHT STREAK
+========================================= */
+
+html::after{
+    content:"";
+    position:fixed;
+
+    width:450px;
+    height:450px;
+
+    top:20%;
+    left:20%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,215,0,.09),
+            transparent 70%
+        );
+
+    filter:blur(100px);
+
+    animation:
+        lightMove 30s linear infinite;
+
+    pointer-events:none;
+    z-index:-2;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes glowMove1{
+
+    0%{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    100%{
+        transform:
+            translate(120px,80px)
+            scale(1.25);
+    }
+
+}
+
+@keyframes glowMove2{
+
+    0%{
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    100%{
+        transform:
+            translate(-150px,-100px)
+            scale(1.3);
+    }
+
+}
+
+@keyframes lightMove{
+
+    0%{
+        transform:
+            translate(-200px,-100px);
+    }
+
+    50%{
+        transform:
+            translate(400px,300px);
+    }
+
+    100%{
+        transform:
+            translate(-200px,-100px);
+    }
+
+}

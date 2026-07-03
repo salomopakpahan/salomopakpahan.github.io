@@ -1,150 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ==========================================
+   PROJECTS
+========================================== */
+
 .projects{
+
+width:100%;
 
 padding:120px 8%;
 
-background:#111;
+background:#080808;
+
+position:relative;
+
+overflow:hidden;
+
+font-family:"Poppins",sans-serif;
 
 }
 
-.projects-container{
+.projects::before{
 
-max-width:1400px;
+content:"";
 
-margin:auto;
+position:absolute;
+
+width:520px;
+
+height:520px;
+
+background:rgba(212,175,55,.06);
+
+border-radius:50%;
+
+filter:blur(120px);
+
+top:-220px;
+
+left:-180px;
 
 }
 
-.projects h2{
+.projects::after{
 
-font-size:55px;
+content:"";
+
+position:absolute;
+
+width:450px;
+
+height:450px;
+
+background:rgba(212,175,55,.05);
+
+border-radius:50%;
+
+filter:blur(120px);
+
+bottom:-200px;
+
+right:-150px;
+
+}
+
+/* ==========================================
+TITLE
+========================================== */
+
+.project-title{
 
 text-align:center;
-
-color:#d4af37;
-
-margin-bottom:20px;
-
-}
-
-.project-subtitle{
-
-text-align:center;
-
-max-width:850px;
-
-margin:auto;
-
-font-size:20px;
-
-line-height:36px;
-
-color:#ccc;
 
 margin-bottom:70px;
 
+position:relative;
+
+z-index:2;
+
 }
+
+.project-title p{
+
+color:#d4af37;
+
+letter-spacing:6px;
+
+font-size:15px;
+
+font-weight:600;
+
+margin-bottom:12px;
+
+}
+
+.project-title h2{
+
+font-size:54px;
+
+font-family:"Cinzel",serif;
+
+color:white;
+
+}
+
+/* ==========================================
+GRID
+========================================== */
 
 .project-grid{
 
+position:relative;
+
+z-index:2;
+
 display:grid;
 
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(3,1fr);
 
 gap:35px;
 
 }
 
+/* ==========================================
+CARD
+========================================== */
+
 .project-card{
 
-background:#181818;
+background:rgba(255,255,255,.05);
 
-border-radius:25px;
+border:1px solid rgba(212,175,55,.18);
+
+border-radius:22px;
 
 overflow:hidden;
 
+backdrop-filter:blur(18px);
+
 transition:.4s;
 
-border:1px solid rgba(212,175,55,.15);
+position:relative;
+
+}
+
+.project-card::before{
+
+content:"";
+
+position:absolute;
+
+width:250px;
+
+height:250px;
+
+background:rgba(212,175,55,.08);
+
+border-radius:50%;
+
+filter:blur(70px);
+
+top:-120px;
+
+right:-120px;
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+.project-card:hover::before{
+
+opacity:1;
 
 }
 
 .project-card:hover{
 
-transform:translateY(-12px);
+transform:translateY(-10px);
 
-box-shadow:0 0 35px rgba(212,175,55,.25);
+border-color:#d4af37;
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.18);
 
 }
+
+/* ==========================================
+IMAGE
+========================================== */
 
 .project-card img{
 
 width:100%;
 
-height:260px;
+height:220px;
 
 object-fit:cover;
+
+transition:.5s;
+
+}
+
+.project-card:hover img{
+
+transform:scale(1.08);
 
 }
 
 .project-content{
 
-padding:30px;
+padding:28px;
 
 }
 
-.project-content h3{
+/* ==========================================
+PROJECT HEADER
+========================================== */
 
-font-size:28px;
-
-margin-bottom:15px;
-
-}
-
-.project-content span{
-
-color:#d4af37;
-
-font-weight:600;
-
-display:block;
-
-margin-bottom:20px;
-
-}
-
-.project-content p{
-
-line-height:34px;
-
-color:#d3d3d3;
-
-margin-bottom:30px;
-
-}
-
-.project-buttons{
+.project-head{
 
 display:flex;
 
-gap:20px;
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:18px;
+
+gap:15px;
 
 }
 
-.project-buttons button{
+.project-head h3{
 
-flex:1;
+font-size:24px;
 
-padding:15px;
+color:white;
 
-border:none;
+line-height:34px;
 
-border-radius:12px;
+font-weight:600;
 
-cursor:pointer;
+}
+
+.project-head span{
+
+background:#d4af37;
+
+color:#111;
+
+padding:8px 16px;
+
+border-radius:30px;
+
+font-size:14px;
+
+font-weight:700;
+
+white-space:nowrap;
+
+}
+
+/* ==========================================
+DESCRIPTION
+========================================== */
+
+.project-content p{
+
+font-size:16px;
+
+line-height:29px;
+
+color:#d0d0d0;
+
+margin-bottom:24px;
+
+}
+
+/* ==========================================
+TECH BADGE
+========================================== */
+
+.badge-group{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:10px;
+
+margin-bottom:25px;
+
+}
+
+.badge-group span{
+
+padding:10px 16px;
+
+border-radius:30px;
+
+background:rgba(212,175,55,.08);
+
+border:1px solid rgba(212,175,55,.25);
+
+color:white;
+
+font-size:14px;
+
+transition:.35s;
+
+}
+
+.badge-group span:hover{
+
+background:#d4af37;
+
+color:#111;
+
+transform:translateY(-3px);
+
+}
+
+/* ==========================================
+LEVEL
+========================================== */
+
+.level{
+
+display:flex;
+
+align-items:center;
+
+gap:6px;
+
+margin-bottom:28px;
+
+color:#d4af37;
 
 font-size:17px;
 
+}
+
+.level span{
+
+margin-left:12px;
+
+font-size:15px;
+
 font-weight:600;
+
+color:white;
+
+}
+
+/* ==========================================
+BUTTONS
+========================================== */
+
+.project-button{
+
+display:flex;
+
+gap:15px;
+
+}
+
+.project-button button{
+
+flex:1;
 
 display:flex;
 
@@ -154,24 +380,340 @@ align-items:center;
 
 gap:10px;
 
-background:#d4af37;
+padding:14px;
+
+border:none;
+
+border-radius:14px;
+
+cursor:pointer;
+
+font-size:15px;
+
+font-weight:600;
 
 transition:.35s;
 
 }
 
-.project-buttons button:hover{
+/* Github */
 
-transform:scale(1.04);
+.project-button button:first-child{
+
+background:#d4af37;
+
+color:#111;
 
 }
 
-@media(max-width:900px){
+.project-button button:first-child:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 0 25px rgba(212,175,55,.35);
+
+}
+
+/* Demo */
+
+.project-button button:last-child{
+
+background:transparent;
+
+border:2px solid #d4af37;
+
+color:white;
+
+}
+
+.project-button button:last-child:hover{
+
+background:#d4af37;
+
+color:#111;
+
+transform:translateY(-4px);
+
+}
+
+/* ==========================================
+CARD HOVER
+========================================== */
+
+.project-card:hover h3{
+
+color:#d4af37;
+
+}
+
+.project-card:hover p{
+
+color:white;
+
+}
+
+/* ==========================================
+ANIMATION
+========================================== */
+
+@keyframes projectFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+.project-card{
+
+animation:projectFade .8s ease both;
+
+}
+
+.project-card:nth-child(1){
+
+animation-delay:.05s;
+
+}
+
+.project-card:nth-child(2){
+
+animation-delay:.15s;
+
+}
+
+.project-card:nth-child(3){
+
+animation-delay:.25s;
+
+}
+
+.project-card:nth-child(4){
+
+animation-delay:.35s;
+
+}
+
+.project-card:nth-child(5){
+
+animation-delay:.45s;
+
+}
+
+.project-card:nth-child(6){
+
+animation-delay:.55s;
+
+}
+
+.project-card:nth-child(7){
+
+animation-delay:.65s;
+
+}
+
+.project-card:nth-child(8){
+
+animation-delay:.75s;
+
+}
+
+.project-card:nth-child(9){
+
+animation-delay:.85s;
+
+}
+
+.project-card:nth-child(10){
+
+animation-delay:.95s;
+
+}
+
+/* ==========================================
+HOVER EFFECT
+========================================== */
+
+.project-card:hover{
+
+transform:
+
+translateY(-12px)
+
+scale(1.02);
+
+}
+
+.project-card:hover .badge-group span{
+
+border-color:#d4af37;
+
+}
+
+.project-card:hover .project-head span{
+
+box-shadow:
+
+0 0 18px rgba(212,175,55,.45);
+
+}
+
+.project-card:hover .level{
+
+transform:translateX(5px);
+
+}
+
+.project-button button{
+
+transition:.35s;
+
+}
+
+.project-button button svg{
+
+transition:.35s;
+
+}
+
+.project-button button:hover svg{
+
+transform:rotate(-10deg) scale(1.2);
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.project-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.projects{
+
+padding:100px 6%;
+
+}
+
+.project-title h2{
+
+font-size:40px;
+
+}
 
 .project-grid{
 
 grid-template-columns:1fr;
 
+gap:28px;
+
 }
+
+.project-card img{
+
+height:220px;
+
+}
+
+.project-head{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.project-button{
+
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.projects{
+
+padding:80px 5%;
+
+}
+
+.project-title p{
+
+font-size:13px;
+
+letter-spacing:4px;
+
+}
+
+.project-title h2{
+
+font-size:34px;
+
+}
+
+.project-content{
+
+padding:22px;
+
+}
+
+.project-head h3{
+
+font-size:20px;
+
+line-height:30px;
+
+}
+
+.project-content p{
+
+font-size:15px;
+
+line-height:26px;
+
+}
+
+.badge-group span{
+
+font-size:13px;
+
+padding:8px 13px;
+
+}
+
+}
+
+/* ==========================================
+SMOOTH
+========================================== */
+
+.projects *{
+
+transition:.35s;
 
 }

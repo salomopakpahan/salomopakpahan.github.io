@@ -1,217 +1,737 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ==========================================
+CONTACT
+========================================== */
+
 .contact{
+
+width:100%;
 
 padding:120px 8%;
 
 background:#090909;
 
-}
+position:relative;
 
-.contact-container{
+overflow:hidden;
 
-max-width:1300px;
-
-margin:auto;
+font-family:"Poppins",sans-serif;
 
 }
 
-.contact h2{
+.contact::before{
 
-font-size:60px;
+content:"";
+
+position:absolute;
+
+width:500px;
+
+height:500px;
+
+border-radius:50%;
+
+background:rgba(212,175,55,.07);
+
+filter:blur(120px);
+
+top:-220px;
+
+left:-180px;
+
+}
+
+.contact::after{
+
+content:"";
+
+position:absolute;
+
+width:450px;
+
+height:450px;
+
+border-radius:50%;
+
+background:rgba(212,175,55,.05);
+
+filter:blur(120px);
+
+right:-180px;
+
+bottom:-180px;
+
+}
+
+/* ==========================================
+TITLE
+========================================== */
+
+.contact-title{
 
 text-align:center;
 
+margin-bottom:70px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.contact-title p{
+
+letter-spacing:6px;
+
+font-size:15px;
+
+font-weight:600;
+
 color:#d4af37;
+
+margin-bottom:12px;
+
+}
+
+.contact-title h2{
+
+font-size:52px;
+
+font-family:"Cinzel",serif;
+
+color:white;
+
+}
+
+/* ==========================================
+LAYOUT
+========================================== */
+
+.contact-container{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* ==========================================
+LEFT PANEL
+========================================== */
+
+.contact-left{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.status-card{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(212,175,55,.2);
+
+border-radius:22px;
+
+padding:35px;
+
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+}
+
+.status-card:hover{
+
+transform:translateY(-8px);
+
+border-color:#d4af37;
+
+box-shadow:0 0 35px rgba(212,175,55,.18);
+
+}
+
+.status-top{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
 
 margin-bottom:20px;
 
 }
 
-.contact-subtitle{
+.status-top svg{
 
-max-width:850px;
+color:#00ff80;
 
-margin:auto;
+font-size:14px;
 
-text-align:center;
-
-font-size:20px;
-
-line-height:36px;
-
-color:#cfcfcf;
-
-margin-bottom:70px;
+animation:pulse 1.5s infinite;
 
 }
 
-.contact-grid{
+.status-top h3{
 
-display:grid;
+font-size:28px;
 
-grid-template-columns:repeat(2,1fr);
-
-gap:30px;
-
-margin-bottom:80px;
+color:white;
 
 }
 
-.contact-card{
+.status-card p{
+
+font-size:17px;
+
+line-height:32px;
+
+color:#d0d0d0;
+
+}
+
+/* ==========================================
+INFO CARD
+========================================== */
+
+.contact-info{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.info{
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+padding:28px;
 
 background:rgba(255,255,255,.05);
 
 border:1px solid rgba(212,175,55,.18);
 
-backdrop-filter:blur(10px);
+border-radius:20px;
 
-border-radius:22px;
-
-padding:40px;
-
-text-align:center;
+backdrop-filter:blur(15px);
 
 transition:.35s;
 
 }
 
-.contact-card:hover{
+.info:hover{
 
-transform:translateY(-10px);
+transform:translateX(10px);
 
-box-shadow:0 0 35px rgba(212,175,55,.25);
+border-color:#d4af37;
+
+box-shadow:0 0 30px rgba(212,175,55,.18);
 
 }
 
-.contact-card svg{
+.info svg{
 
-font-size:45px;
+font-size:30px;
 
 color:#d4af37;
 
-margin-bottom:20px;
+min-width:35px;
 
 }
 
-.contact-card h3{
-
-font-size:28px;
-
-margin-bottom:15px;
-
-}
-
-.contact-card p{
-
-color:#d5d5d5;
-
-margin-bottom:25px;
-
-}
-
-.contact-card a{
-
-display:inline-block;
-
-padding:14px 30px;
-
-background:#d4af37;
-
-color:#111;
-
-font-weight:600;
-
-border-radius:12px;
-
-transition:.35s;
-
-}
-
-.contact-card a:hover{
-
-transform:scale(1.05);
-
-}
-
-.contact-message{
-
-text-align:center;
-
-background:#141414;
-
-padding:60px;
-
-border-radius:30px;
-
-border:1px solid rgba(212,175,55,.15);
-
-}
-
-.contact-message h3{
-
-font-size:42px;
-
-margin-bottom:20px;
-
-}
-
-.contact-message p{
+.info h4{
 
 font-size:20px;
 
-line-height:38px;
+color:white;
 
-max-width:800px;
-
-margin:auto;
-
-margin-bottom:40px;
-
-color:#d4d4d4;
+margin-bottom:8px;
 
 }
 
-.contact-button{
+.info span{
 
-display:inline-flex;
+font-size:16px;
+
+color:#d0d0d0;
+
+}
+
+/* ==========================================
+RIGHT
+========================================== */
+
+.contact-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+/* ==========================================
+SOCIAL CARD
+========================================== */
+
+.social-card{
+
+display:flex;
 
 align-items:center;
 
-gap:12px;
+gap:22px;
 
-padding:18px 40px;
+padding:28px;
 
-background:#d4af37;
+background:rgba(255,255,255,.05);
 
-color:#111;
+border:1px solid rgba(212,175,55,.18);
 
-font-size:18px;
+border-radius:22px;
 
-font-weight:700;
+text-decoration:none;
 
-border-radius:15px;
+backdrop-filter:blur(18px);
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.social-card::before{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+background:rgba(212,175,55,.08);
+
+filter:blur(70px);
+
+top:-120px;
+
+right:-120px;
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+.social-card:hover::before{
+
+opacity:1;
+
+}
+
+.social-card:hover{
+
+transform:translateY(-8px);
+
+border-color:#d4af37;
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.18);
+
+}
+
+.social-card svg{
+
+font-size:42px;
+
+color:#d4af37;
 
 transition:.35s;
 
 }
 
-.contact-button:hover{
+.social-card:hover svg{
 
-transform:translateY(-6px);
+transform:scale(1.18) rotate(-8deg);
 
 }
 
-@media(max-width:900px){
+.social-card h3{
 
-.contact-grid{
+font-size:24px;
+
+margin-bottom:8px;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.social-card p{
+
+font-size:16px;
+
+color:#d0d0d0;
+
+word-break:break-word;
+
+transition:.35s;
+
+}
+
+.social-card:hover h3{
+
+color:#d4af37;
+
+}
+
+.social-card:hover p{
+
+color:white;
+
+}
+
+/* ==========================================
+ANIMATION
+========================================== */
+
+@keyframes contactFade{
+
+0%{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes pulse{
+
+0%{
+
+opacity:.5;
+
+transform:scale(.9);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+opacity:.5;
+
+transform:scale(.9);
+
+}
+
+}
+
+.status-card{
+
+animation:contactFade .8s ease both;
+
+}
+
+.info{
+
+animation:contactFade .8s ease both;
+
+}
+
+.social-card{
+
+animation:contactFade .8s ease both;
+
+}
+
+.info:nth-child(1){
+
+animation-delay:.1s;
+
+}
+
+.info:nth-child(2){
+
+animation-delay:.2s;
+
+}
+
+.info:nth-child(3){
+
+animation-delay:.3s;
+
+}
+
+.social-card:nth-child(1){
+
+animation-delay:.4s;
+
+}
+
+.social-card:nth-child(2){
+
+animation-delay:.5s;
+
+}
+
+.social-card:nth-child(3){
+
+animation-delay:.6s;
+
+}
+
+.social-card:nth-child(4){
+
+animation-delay:.7s;
+
+}
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+
+@media(max-width:1200px){
+
+.contact-container{
 
 grid-template-columns:1fr;
 
 }
 
-.contact-message{
+}
 
-padding:40px 25px;
+@media(max-width:768px){
+
+.contact{
+
+padding:100px 6%;
 
 }
+
+.contact-title h2{
+
+font-size:40px;
+
+line-height:52px;
+
+}
+
+.status-top h3{
+
+font-size:24px;
+
+}
+
+.info{
+
+padding:22px;
+
+}
+
+.social-card{
+
+padding:22px;
+
+}
+
+.social-card svg{
+
+font-size:34px;
+
+}
+
+.social-card h3{
+
+font-size:20px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.contact{
+
+padding:80px 5%;
+
+}
+
+.contact-title p{
+
+font-size:13px;
+
+letter-spacing:4px;
+
+}
+
+.contact-title h2{
+
+font-size:32px;
+
+line-height:45px;
+
+}
+
+.status-card{
+
+padding:25px;
+
+}
+
+.status-card p{
+
+font-size:15px;
+
+line-height:28px;
+
+}
+
+.info{
+
+padding:18px;
+
+gap:15px;
+
+}
+
+.info svg{
+
+font-size:24px;
+
+}
+
+.info h4{
+
+font-size:18px;
+
+}
+
+.info span{
+
+font-size:14px;
+
+}
+
+.social-card{
+
+padding:20px;
+
+gap:16px;
+
+}
+
+.social-card svg{
+
+font-size:28px;
+
+}
+
+.social-card h3{
+
+font-size:18px;
+
+}
+
+.social-card p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ==========================================
+HOVER
+========================================== */
+
+.contact *{
+
+transition:.35s;
+
+}
+
+.status-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.info:hover svg{
+
+transform:rotate(-8deg) scale(1.15);
+
+}
+
+.social-card:hover{
+
+transform:
+
+translateY(-8px)
+
+scale(1.02);
+
+}
+
+.social-card:hover svg{
+
+filter:drop-shadow(
+
+0 0 15px rgba(212,175,55,.7)
+
+);
+
+}
+
+/* ==========================================
+FINISH
+========================================== */
+
+.contact{
+
+border-top:1px solid rgba(255,255,255,.05);
 
 }

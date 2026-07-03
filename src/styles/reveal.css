@@ -1,0 +1,77 @@
+.reveal{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.reveal-hidden{
+  opacity:0;
+  transform:translateY(60px);
+}
+
+.reveal.show{
+  opacity:1;
+  transform:translateY(0);
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+/* Left */
+
+.reveal-left{
+
+opacity:0;
+
+transform:translateX(-80px);
+
+transition:.9s;
+
+}
+
+.reveal-left.active{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+/* Right */
+
+.reveal-right{
+
+opacity:0;
+
+transform:translateX(80px);
+
+transition:.9s;
+
+}
+
+.reveal-right.active{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+/* Zoom */
+
+.reveal-scale{
+
+opacity:0;
+
+transform:scale(.85);
+
+transition:.9s;
+
+}
+
+.reveal-scale.active{
+
+opacity:1;
+
+transform:scale(1);
+
+}

@@ -1,94 +1,45 @@
 import "./Footer.css";
 
-import {
-  FaGithub,
-  FaInstagram,
-  FaEnvelope,
-  FaHeart,
-} from "react-icons/fa";
-
 function Footer() {
-
   return (
+    <footer className="footer">
 
-<footer className="footer">
+      <h2>SPARKLAB</h2>
 
-<div className="footer-container">
+      <p>
+        Building the future through
+        Automation, Artificial Intelligence,
+        and Industrial IoT.
+      </p>
 
-<h2>
+      <div className="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-Salomo
+      <div className="footer-socials">
+        <a href="https://github.com/" target="_blank">
+          Github
+        </a>
 
-</h2>
+        <a href="https://linkedin.com/" target="_blank">
+          LinkedIn
+        </a>
 
-<p>
+        <a href="mailto:your@email.com">
+          Email
+        </a>
+      </div>
 
-Electrical Engineering Student
+      <span>
+        © 2026 Salomo Fransiskus Pakpahan
+      </span>
 
-</p>
-
-<span>
-
-Industrial IoT • PLC Automation • Artificial Intelligence • Embedded System • Web Development
-
-</span>
-
-<div className="footer-social">
-
-<a
-href="https://github.com/salomopakpahan"
-target="_blank"
-rel="noreferrer"
->
-
-<FaGithub/>
-
-</a>
-
-<a
-href="https://www.instagram.com/frans_salomo/"
-target="_blank"
-rel="noreferrer"
->
-
-<FaInstagram/>
-
-</a>
-
-<a
-href="mailto:pakpahansalomo2@gmail.com"
->
-
-<FaEnvelope/>
-
-</a>
-
-</div>
-
-<hr/>
-
-<p className="copyright">
-
-© 2026 Salomo Fransiskus Pakpahan
-
-</p>
-
-<p className="made">
-
-Designed & Developed with
-
-<FaHeart/>
-
-using React
-
-</p>
-
-</div>
-
-</footer>
-
-  )
-
+    </footer>
+  );
 }
 
 export default Footer;

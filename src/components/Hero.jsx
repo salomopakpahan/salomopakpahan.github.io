@@ -36,7 +36,7 @@ second
 
 return(
 
-<section id="home" className="hero">
+<section id="home" className="hero reveal">
 
 <div className="hero-container">
 
