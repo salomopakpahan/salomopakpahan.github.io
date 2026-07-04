@@ -49,48 +49,38 @@ function Navbar() {
 
   useEffect(() => {
 
-    const getWeather = async () => {
+  const getWeather = async () => {
 
-      try {
+    try {
 
-        const response = await fetch(
-          "https://api.open-meteo.com/v1/forecast?latitude=-7.2575&longitude=112.7521&current_weather=true"
-        );
+      const response = await fetch(
+        "https://wttr.in/Surabaya?format=j1"
+      );
 
-        const data = await response.json();
+      const data = await response.json();
 
-        setTemperature(
-          Math.round(
-            data.current_weather.temperature
-          )
-        );
+      setTemperature(
+        data.current_condition[0].temp_C
+      );
 
-        const code =
-          data.current_weather.weathercode;
+      setWeather(
+        data.current_condition[0].weatherDesc[0].value
+      );
 
-        if (code === 0) {
-          setWeather("Sunny");
-        }
-        else if (code <= 3) {
-          setWeather("Cloudy");
-        }
-        else if (code <= 67) {
-          setWeather("Rain");
-        }
-        else {
-          setWeather("Storm");
-        }
+    } catch (error) {
 
-      }
-      catch (error) {
-        console.log(error);
-      }
+      console.log("Weather Error:", error);
 
-    };
+      setTemperature("30");
+      setWeather("Sunny");
 
-    getWeather();
+    }
 
-  }, []);
+  };
+
+  getWeather();
+
+}, []);
 
   return (
 
