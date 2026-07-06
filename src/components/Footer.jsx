@@ -77,7 +77,7 @@ function Footer() {
           </p>
 
           <span>
-            Designed & Developed with React + Vite
+            Designed & Developed with Park Pha Ahn Group
           </span>
 
         </div>
