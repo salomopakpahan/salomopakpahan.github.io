@@ -77,7 +77,7 @@ function Footer() {
           </p>
 
           <span>
-            Designed & Developed By Park Pha Ahn Group
+            Designed & Developed By
           </span>
 
         </div>
